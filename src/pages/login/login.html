@@ -1,0 +1,39 @@
+
+<ion-header>
+
+  <ion-navbar color="secondary">
+    <ion-title>Login</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<form [formGroup]="form" (ngSubmit)="login()">
+		<ion-list inset>
+
+			<ion-item>
+				<ion-icon name="ios-contact" item-start></ion-icon>
+				<ion-input formControlName="email"  placeholder="Email" type="text" value="" autocapitalize="off"></ion-input>
+			</ion-item>
+
+			<ion-item>
+				<ion-icon name="ios-lock" item-start></ion-icon>
+				<ion-input formControlName="password"  placeholder="Password" type="password" value=""></ion-input>
+			</ion-item>
+		</ion-list>
+
+		<div padding>
+			<button [disabled]="!form.valid" type="submit" ion-button color="secondary" block>Login</button>
+		</div>
+
+		<ion-row>
+			<ion-col text-left>
+				<a class="sub-link" (click)="forgotPassword()">Forgot password?</a>
+			</ion-col>
+			<ion-col text-right>
+				<a class="sub-link" (click)="signup()">Sign Up</a>
+			</ion-col>
+		</ion-row>
+	</form>
+</ion-content>

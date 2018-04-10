@@ -1,0 +1,19 @@
+<ion-header>
+
+  <ion-navbar color="secondary">
+    <ion-title>Messages</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <button ion-button color="primary" small (click)="goRoomList()">Back to list</button>
+</ion-content>
+
+<ion-footer>
+  <ion-item>
+    <ion-input item-start [(ngModel)]="message"  placeholder="Enter your message" type="text" value=""></ion-input>
+    <button item-end ion-button color="primary" small (click)="send()">Send</button>
+  </ion-item>
+</ion-footer>

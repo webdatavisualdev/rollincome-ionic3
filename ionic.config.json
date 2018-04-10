@@ -1,0 +1,8 @@
+{
+  "name": "rollincome",
+  "app_id": "b727558c",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

@@ -1,0 +1,24 @@
+
+<ion-header>
+
+  <ion-navbar color="secondary">
+    <ion-title>Menu</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col *ngFor="let m of menuItems" class="menu" col-6 (click)="goPage(m.page)">
+        <div [style.background]="m.color">{{m.text}}</div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12 class="btn-logout" (click)="logout()">
+        <div>Logout</div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

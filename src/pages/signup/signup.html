@@ -1,0 +1,59 @@
+<ion-header>
+
+  <ion-navbar color="secondary">
+    <ion-title>Signup</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <form [formGroup]="form" (ngSubmit)="signup()">
+    <ion-list inset>
+
+      <ion-item>
+        <ion-icon name="ios-contact" item-start></ion-icon>
+        <ion-input formControlName="first_name"  placeholder="First Name" type="text" value=""></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="ios-contact" item-start></ion-icon>
+        <ion-input formControlName="email"  placeholder="Email" type="text" value="" autocapitalize="off"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="ios-lock" item-start></ion-icon>
+        <ion-input formControlName="password"  placeholder="Password" type="password" value=""></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="ios-lock" item-start></ion-icon>
+        <ion-input formControlName="confirmPassword"  placeholder="Confirm Password" type="password" value=""></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-list radio-group formControlName="gender">
+      <ion-list-header>
+        Gender
+      </ion-list-header>
+      <ion-item>
+        <ion-label>Male</ion-label>
+        <ion-radio value="Male"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Female</ion-label>
+        <ion-radio value="Female"></ion-radio>
+      </ion-item>
+    </ion-list>
+
+    <div padding>
+      <button [disabled]="!form.valid" type="submit" ion-button color="secondary" block>Signup</button>
+    </div>
+
+    <ion-row>
+      <ion-col>
+        <a class="sub-link" (click)="login()">Login</a>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

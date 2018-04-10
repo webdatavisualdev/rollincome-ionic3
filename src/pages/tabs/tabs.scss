@@ -1,0 +1,11 @@
+page-tabs {
+    .tab-button {
+        border-left: 1px solid #ccc;
+        border-right: 1px solid #ccc;
+        background: linear-gradient(180deg, #70829b, #697b95);
+        
+        .tab-button-text {
+            color: #fff;
+        }
+    }
+}
