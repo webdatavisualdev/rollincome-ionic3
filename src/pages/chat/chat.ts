@@ -28,6 +28,14 @@ export class ChatPage {
     
   }
 
+  getItems(event) {
+
+  }
+
+  onCancel(event) {
+    
+  }
+
   goMessages(id) {
     this.navCtrl.setRoot('ChatMessagesPage', {id: id});
   }

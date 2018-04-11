@@ -3,15 +3,13 @@ import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs/Subject';
 import { Login, Signup } from '../models';
 import * as sha512 from 'sha512';
-
-const serverUrl = 'https://www.rollincome.com/api/';
+import { serverUrl } from '../config';
 
 @Injectable()
 export class AuthProvider {
   public isLoggedIn = new Subject();
 
   constructor(public http: HttpClient) {
-    
   }
 
   logout() {

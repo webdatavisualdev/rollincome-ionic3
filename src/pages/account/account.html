@@ -20,7 +20,13 @@
       <button ion-button item-end color="primary" small>Buy more kori</button>
     </ion-item>
     <ion-item>
-      <ion-input type="text" placeholder="Search"></ion-input>
+      <ion-searchbar #searchBar
+        [showCancelButton]="false"
+        (input)="getItems($event)"
+        (ionCancel)="onCancel($event)"
+        (ionClear)="onCancel($event)"
+        placeholder="Search">
+      </ion-searchbar>
     </ion-item>
     <ion-list-header>
       Transaction

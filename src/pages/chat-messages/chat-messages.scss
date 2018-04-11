@@ -1,3 +1,60 @@
 page-chat-messages {
+    .ion-ios-arrow-back {
+        margin-right: 5px !important;
+    }
 
+    ion-item {
+        border: 0 !important;
+    }
+
+    .item-inner {
+        border: 0 !important;
+    }
+
+    ion-label {
+        margin: 5px 0 !important;
+    }
+
+    .message-content {
+        display: inline-block;
+        padding: 10px;
+        color: #fff;
+        border-radius: 30px;
+
+        p {
+            margin: 0;
+            color: #fff;
+        }
+    }
+
+    .received {
+        .message-content {
+            background-color: #0091ff;
+            border-top-left-radius: 0;
+        }
+    }
+
+    .sent {
+        text-align: right;
+        
+        .message-content {
+            background-color: #3f3f3f;
+            border-bottom-right-radius: 0;
+        }
+    }
+
+    .message-text {
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    .message-sender {
+        font-size: 12px;
+    }
+
+    .message-time {
+        text-align: right;
+        font-size: 11px;
+        margin-top: 5px !important;
+    }
 }

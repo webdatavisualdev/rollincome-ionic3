@@ -9,6 +9,7 @@ import { AuthProvider } from '../providers/auth/auth';
 import { HttpClientModule } from '@angular/common/http';
 import { LoadingProvider } from '../providers/loading/loading';
 import { ApiProvider } from '../providers/api/api';
+import { ChatProvider } from '../providers/chat/chat';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ApiProvider } from '../providers/api/api';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthProvider,
     LoadingProvider,
-    ApiProvider
+    ApiProvider,
+    ChatProvider
   ]
 })
 export class AppModule {}

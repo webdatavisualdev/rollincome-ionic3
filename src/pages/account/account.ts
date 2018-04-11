@@ -41,4 +41,11 @@ export class AccountPage {
     
   }
 
+  getItems(event) {
+
+  }
+
+  onCancel(event) {
+    
+  }
 }

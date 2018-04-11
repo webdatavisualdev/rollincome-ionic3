@@ -1,7 +1,6 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-
-const serverUrl = 'https://www.rollincome.com/api/';
+import { serverUrl } from '../config';
 
 @Injectable()
 export class ApiProvider {
@@ -32,6 +31,14 @@ export class ApiProvider {
     if (name) {
       params = params.set('name', name);
     }
+    return this.http.get(url, {params: params});
+  }
+
+  getMessages(receiver_id: string) {
+    const url = serverUrl + 'group/messages';
+    let params = new HttpParams();
+    params = params.set('token', this.token);
+    params = params.set('receiver_id', receiver_id);
     return this.http.get(url, {params: params});
   }
 }
