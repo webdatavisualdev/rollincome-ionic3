@@ -41,4 +41,11 @@ export class ApiProvider {
     params = params.set('receiver_id', receiver_id);
     return this.http.get(url, {params: params});
   }
+
+  getPayments() {
+    const url = serverUrl + 'user/obligations';
+    let params = new HttpParams();
+    params = params.set('token', this.token);
+    return this.http.get(url, {params: params});
+  }
 }

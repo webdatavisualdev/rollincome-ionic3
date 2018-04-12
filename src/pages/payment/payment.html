@@ -4,10 +4,23 @@
   <ion-navbar color="secondary">
     <ion-title>Payment</ion-title>
   </ion-navbar>
-
+  <ion-toolbar>
+    <ion-searchbar #searchBar
+    [showCancelButton]="false"
+    (input)="getItems($event)"
+    (ionCancel)="onCancel($event)"
+    (ionClear)="onCancel($event)"
+    placeholder="Search">
+    </ion-searchbar>
+  </ion-toolbar>
 </ion-header>
 
 
-<ion-content padding>
-
+<ion-content>
+  <ion-list>
+    <ion-item detail-push *ngFor="let p of payments" (click)="goPaymentDetails(p)">
+      <span>To {{p.to}}, Amount: {{p.amount_due}} {{p.currency}}</span>
+      <span class="date">{{p.projected_payment_due_date}}</span>
+    </ion-item>
+  </ion-list>
 </ion-content>

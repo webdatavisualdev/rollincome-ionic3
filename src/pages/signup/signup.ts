@@ -43,7 +43,7 @@ export class SignupPage {
     this.loading.show('signup');
     this.auth.signup(this.form.value).subscribe((res: any) => {
       if (res.email_created == 'yes') {
-        this.login();
+        this.navCtrl.push('CheckEmailPage', {email: this.form.value.email});
       }
       this.loading.dismiss('signup');
     });

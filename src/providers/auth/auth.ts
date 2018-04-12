@@ -47,4 +47,12 @@ export class AuthProvider {
     params = params.set('gender', data.gender);
     return this.http.get(url, {params: params});
   }
+
+  validate(data) {
+    const url = serverUrl + 'user/email/validate';
+    let params: HttpParams = new HttpParams();
+    params = params.set('email', data.email);
+    params = params.set('validation_code', data.validation_code);
+    return this.http.get(url, {params: params});
+  }
 }

@@ -2,9 +2,24 @@
 <ion-header>
 
   <ion-navbar color="secondary">
+    <ion-buttons start>
+      <button ion-button small (click)="goMenu()">
+        <ion-icon name="arrow-back"></ion-icon>
+        Back to menu
+      </button>
+    </ion-buttons>
     <ion-title>Group</ion-title>
   </ion-navbar>
 
+  <ion-toolbar>
+    <ion-searchbar #searchBar
+    [showCancelButton]="false"
+    (input)="getItems($event)"
+    (ionCancel)="onCancel($event)"
+    (ionClear)="onCancel($event)"
+    placeholder="Search">
+    </ion-searchbar>
+  </ion-toolbar>
 </ion-header>
 
 

@@ -1,0 +1,11 @@
+page-payment-details {
+    ion-card-content {
+        ion-item {
+            border-bottom: 1px solid #aaa !important;
+        }
+
+        ion-item:last-child {
+            border-bottom: 0 !important;
+        }
+    }
+}

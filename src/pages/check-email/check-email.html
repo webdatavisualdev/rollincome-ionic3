@@ -1,0 +1,22 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Check Email</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-list inset>
+    <p>Please check your email and enter code here.</p>
+    <ion-item>
+      <ion-icon name="ios-lock" item-start></ion-icon>
+      <ion-input [(ngModel)]="code"  placeholder="Enter code" type="text" value="" autocapitalize="off"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <div padding>
+    <button [disabled]="code == ''" type="button" ion-button color="secondary" block (click)="validate()">Validate Code</button>
+  </div>
+</ion-content>

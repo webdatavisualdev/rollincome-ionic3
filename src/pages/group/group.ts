@@ -22,4 +22,15 @@ export class GroupPage {
     console.log('ionViewDidLoad GroupPage');
   }
 
+  goMenu() {
+    this.navCtrl.setRoot('MenuPage');
+  }
+
+  getItems(e) {
+
+  }
+
+  onCancel(e) {
+    
+  }
 }

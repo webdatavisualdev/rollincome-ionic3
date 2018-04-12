@@ -1,0 +1,58 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-buttons start>
+      <button ion-button small (click)="goRoomList()">
+        <ion-icon name="arrow-back"></ion-icon>
+        Back to payment list
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <p>Payment code: {{paymentDetail.ocode}}</p>
+      <p>Group: {{paymentDetail.group}}</p>
+      <p>Receiver: {{paymentDetail.to}}</p>
+      <p>Purpose: {{paymentDetail.p_type_text}}</p>
+      <p>Amount: {{paymentDetail.amount_due}} {{paymentDetail.currency}}</p>
+      <p>Status: {{paymentDetail.status}}</p>
+      <p>Date: {{paymentDetail.projected_payment_due_date}}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content radio-group [(ngModel)]="paymentMethod">
+      <ion-item>
+        <ion-label>By Hand</ion-label>
+        <ion-radio value="By Hand"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Bank transfer to member</ion-label>
+        <ion-radio value="Bank transfer to member"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Bank transfer to group</ion-label>
+        <ion-radio value="Bank transfer to group"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Credit/Debit Card</ion-label>
+        <ion-radio value="Credit/Debit Card"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Kori</ion-label>
+        <ion-radio value="Kori"></ion-radio>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-row>
+    <ion-col text-right>
+      <button color="primary" ion-button small>Next</button>
+    </ion-col>
+  </ion-row>
+</ion-content>
