@@ -4,10 +4,23 @@
   <ion-navbar color="secondary">
     <ion-title>Request</ion-title>
   </ion-navbar>
-
+  <ion-toolbar>
+    <ion-searchbar #searchBar
+    [showCancelButton]="false"
+    (input)="getItems($event)"
+    (ionCancel)="onCancel($event)"
+    (ionClear)="onCancel($event)"
+    placeholder="Search">
+    </ion-searchbar>
+  </ion-toolbar>
 </ion-header>
 
 
-<ion-content padding>
-
+<ion-content>
+  <ion-list>
+    <ion-item detail-push *ngFor="let r of requests" (click)="goRequestDetails(r)">
+      <span>From {{r.sender}}</span>
+      <span class="date">{{r.request_date}}</span>
+    </ion-item>
+  </ion-list>
 </ion-content>

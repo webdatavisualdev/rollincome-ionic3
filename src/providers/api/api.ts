@@ -48,4 +48,11 @@ export class ApiProvider {
     params = params.set('token', this.token);
     return this.http.get(url, {params: params});
   }
+
+  getRequests() {
+    const url = serverUrl + 'user/requests';
+    let params = new HttpParams();
+    params = params.set('token', this.token);
+    return this.http.get(url, {params: params});
+  }
 }

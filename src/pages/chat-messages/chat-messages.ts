@@ -45,12 +45,13 @@ export class ChatMessagesPage {
   }
 
   send() {
-    this.chat.sendMessage({
-      message: this.message,
-      receiver_id: this.receiver_id,
-      token: localStorage.getItem('token'),
-    });
-
-    this.message = '';
+    if (this.message !== '') {
+      this.chat.sendMessage({
+        message: this.message,
+        receiver_id: this.receiver_id,
+        token: localStorage.getItem('token'),
+      });
+      this.message = '';
+    }
   }
 }

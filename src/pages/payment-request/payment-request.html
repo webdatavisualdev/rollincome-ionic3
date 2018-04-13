@@ -1,0 +1,43 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-buttons start>
+      <button ion-button small (click)="goPaymentDetails()">
+        <ion-icon name="arrow-back"></ion-icon>
+        Back to payment {{paymentDetail.ocode}}
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <p>Payment code: {{paymentDetail.ocode}}</p>
+      <p>Group: {{paymentDetail.group}}</p>
+      <p>Receiver: {{paymentDetail.to}}</p>
+      <p>Purpose: {{paymentDetail.p_type_text}}</p>
+      <p>Amount: {{paymentDetail.amount_due}} {{paymentDetail.currency}}</p>
+      <p>Status: {{paymentDetail.status}}</p>
+      <p>Date: {{paymentDetail.projected_payment_due_date}}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+      <p>Send the request to validate a payment</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-row>
+    <ion-col>
+      <button color="primary" ion-button small (click)="goPaymentDetails()">Previous</button>
+    </ion-col>
+    <ion-col text-right>
+      <button color="primary" ion-button small (click)="sendRequest()">Send request</button>
+    </ion-col>
+  </ion-row>
+</ion-content>

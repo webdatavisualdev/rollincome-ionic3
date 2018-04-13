@@ -24,4 +24,11 @@ export class PaymentDetailsPage {
   goRoomList() {
     this.navCtrl.setRoot('PaymentPage');
   }
+
+  goPaymentRequest() {
+    this.navCtrl.setRoot('PaymentRequestPage', {
+      ...this.paymentDetail,
+      paymentMethod: this.paymentMethod
+    });
+  }
 }
